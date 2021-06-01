@@ -1,5 +1,5 @@
 // Awilix
-import { asClass, createContainer } from 'awilix';
+import { asClass, createContainer, InjectionMode } from 'awilix';
 import { scopePerRequest } from 'awilix-express';
 
 // Express
@@ -13,7 +13,7 @@ import { MovementRepository, MovementMapperDB  } from 'wallet-repositories'
 
 
 // Create container
-const container = createContainer({ injectionMode: 'CLASSIC' });
+const container = createContainer({ injectionMode: InjectionMode.CLASSIC });
 
 // Bindings Services
 container.register({
